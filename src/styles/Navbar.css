@@ -1,0 +1,305 @@
+/* Professional Navbar - Reduced size but bigger fonts */
+.navbar {
+  /* THEME VARIABLES (white navbar on light content) */
+  --nav-bg: #ffffff; /* White background */
+  --nav-brand-color: #101663; /* Black brand text */
+  --nav-link-color:#101663; /* Black links */
+  --nav-hover-bg: rgba(0, 0, 0, 0.08); /* Light black hover */
+  --nav-active-bg: rgba(0, 0, 0, 0.12); /* Slightly darker active */
+  --nav-divider: rgba(0, 0, 0, 0.1);
+  --toggler-color: #000000; /* Black hamburger icon */
+
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--nav-divider);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.4rem 0;
+  box-shadow: var(--shadow-lg);
+  min-height: 105px;
+}
+
+/* ✅ BLUE NAVBAR VARIANT for non-home pages */
+.navbar.on-blue {
+  --nav-bg: #0b20dd; /* Blue background */
+  --nav-brand-color: #ffffff; /* White brand text */
+  --nav-link-color: #ffffff; /* White links */
+  --nav-hover-bg: rgba(255, 255, 255, 0.15);
+  --nav-active-bg: rgba(255, 255, 255, 0.2);
+  --nav-divider: rgba(255, 255, 255, 0.15);
+  --toggler-color: #ffffff; /* White hamburger icon */
+}
+
+/* When navbar is scrolled */
+.navbar.scrolled {
+  background: var(--nav-bg) !important;
+  box-shadow: var(--shadow-xl);
+  padding: 0.2rem 0;
+  min-height: 105px;
+}
+
+/* Navbar Brand & Logo */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--nav-brand-color) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: brandGlow 2s ease-in-out infinite alternate;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+  filter: brightness(1);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes brandGlow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: var(--light-blue) !important;
+}
+
+.navbar-brand .gradient-text {
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  margin: 0 0.2rem;
+  padding: 0.6rem 1rem !important;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  color: var(--nav-link-color) !important;
+  overflow: hidden;
+  animation: navLinkFloat 3s ease-in-out infinite;
+  font-size: 1.05rem; /* Increased from 0.85rem */
+}
+
+@keyframes navLinkFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.navbar.on-blue .navbar-nav .nav-link::before {
+  /* Subtle highlight sweep tuned for white nav */
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.navbar-nav .nav-link:hover::before {
+  left: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--nav-link-color) !important;
+  background: var(--nav-active-bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+@keyframes activePulse {
+  0%, 100% { box-shadow: var(--shadow-md); }
+  50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+}
+
+.navbar.on-blue .navbar-nav .nav-link.active {
+  /* Calmer glow for white navbar */
+  animation: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--nav-link-color) !important;
+  background: var(--nav-hover-bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Professional Dropdown Menu */
+.dropdown-menu {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl);
+  background: var(--white);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--gray-200);
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  min-width: 250px;
+}
+
+.dropdown-item {
+  padding: 0.85rem 1.5rem; /* Slightly bigger */
+  font-weight: 500;
+  color: var(--gray-700);
+  transition: all 0.3s ease;
+  border-radius: 0;
+  font-size: 1rem; /* Increased from 0.9rem */
+}
+
+.dropdown-item:hover {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  transform: translateX(5px);
+}
+
+.dropdown-item i {
+  color: var(--secondary-blue);
+  width: 20px;
+  text-align: center;
+}
+
+.dropdown-divider {
+  margin: 0.75rem 1.5rem;
+  border-color: var(--gray-200);
+}
+
+/* Call Now Button */
+.btn-accent {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  border: none;
+  color: var(--white) !important;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: buttonPulse 2s ease-in-out infinite;
+  font-size: 1rem; /* Increased from 0.8rem */
+}
+
+@keyframes buttonPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.btn-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-accent:hover::before {
+  left: 100%;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Mobile Toggle Button */
+.navbar-toggler {
+  border: none !important;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Use currentColor in the SVG so it adapts to theme */
+.navbar-toggler-icon {
+  color: var(--toggler-color);
+  background-image:
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22 M4 15h22 M4 23h22'/%3e%3c/svg%3e");
+  width: 1.2rem; 
+  height: 1.2rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar.on-blue .navbar-toggler:focus,
+.navbar.on-blue .navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    margin: 0.25rem 0;
+    padding: 0.85rem 1.1rem !important;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-accent {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .dropdown-menu {
+    border-radius: 12px;
+    margin-top: 0.25rem;
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-logo {
+    height: 35px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem !important;
+  }
+}

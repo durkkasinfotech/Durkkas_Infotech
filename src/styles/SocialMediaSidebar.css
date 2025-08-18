@@ -1,0 +1,188 @@
+/* =============================================
+   SOCIAL MEDIA SIDEBAR COMPONENT STYLES
+   ============================================= */
+
+/* Social Media Sidebar - Left side floating */
+.social-media-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999; /* Reduced z-index to stay below navbar but above content */
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  animation: sidebarFloat 4s ease-in-out infinite;
+  max-width: 250px; /* Limit maximum width */
+}
+
+@keyframes sidebarFloat {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(2px); }
+}
+
+/* Individual Social Media Items */
+.social-media-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  padding: 0.75rem;
+  width: 3rem;
+  height: 3rem;
+  background: #ffffff; /* Solid white */
+  color: inherit; /* Use platform color */
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-media-item:hover {
+  background: var(--hover-color, rgba(255, 255, 255, 0.2));
+  box-shadow: var(--shadow-lg);
+}
+
+/* Social Media Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: inherit;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.social-icon i {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-media-item:hover .social-icon i {
+  animation: iconBounce 0.6s ease;
+    color: #ffffff;
+
+}
+
+@keyframes iconBounce {
+  0%, 20%, 60%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-3px); }
+  80% { transform: translateY(-1px); }
+}
+
+
+
+/* Individual Platform Colors */
+.social-media-item[href*="facebook"] {
+  color: #1877f2;
+}
+
+.social-media-item[href*="instagram"] {
+  color: #e4405f;
+}
+
+.social-media-item[href*="linkedin"] {
+  color: #0077b5;
+}
+
+.social-media-item[href*="twitter"] {
+  color: #1da1f2;
+}
+
+.social-media-item[href*="youtube"] {
+  color: #ff0000;
+}
+
+.social-media-item[href*="whatsapp"] {
+  color: #25d366;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .social-media-sidebar {
+    position: fixed;
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+    flex-direction: row;
+    border-radius: 20px 20px 0 0;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    animation: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .social-media-item {
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .social-media-item:hover {
+    background: var(--hover-color, rgba(255, 255, 255, 0.2));
+    box-shadow: var(--shadow-lg);
+  }
+
+  .social-icon i {
+    font-size: 1rem;
+  }
+
+
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .social-media-sidebar {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+
+  .social-media-item {
+    padding: 0.4rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .social-icon i {
+    font-size: 0.9rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .social-media-item {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid currentColor;
+  }
+
+
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .social-media-sidebar,
+  .social-media-item,
+  .social-icon {
+    animation: none;
+    transition: none;
+  }
+
+
+}

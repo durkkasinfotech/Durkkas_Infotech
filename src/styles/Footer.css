@@ -1,0 +1,158 @@
+/* =============================================
+   FOOTER COMPONENT STYLES
+   ============================================= */
+
+/* Main Footer Container */
+footer {
+  background: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  animation: footerGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes footerGlow {
+  from {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  to {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -5px 20px rgba(59, 130, 246, 0.1);
+  }
+}
+
+/* Footer Background Pattern */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--secondary-blue);
+  animation: footerLine 3s ease-in-out infinite;
+}
+
+@keyframes footerLine {
+  0%, 100% { transform: scaleX(1); opacity: 0.8; }
+  50% { transform: scaleX(1.05); opacity: 1; }
+}
+
+/* Footer Text Styling */
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+footer p:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Copyright Symbol Styling */
+footer p::before {
+  content: '©';
+  margin-right: 0.25rem;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  text-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+/* Company Name Highlight */
+footer .company-name {
+  color: var(--secondary-blue);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+footer .company-name:hover {
+  color: var(--light-blue);
+  text-shadow: 0 0 15px rgba(219, 234, 254, 0.6);
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding: 1.25rem 0.75rem;
+    margin-top: 2rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  footer {
+    background: var(--gray-900);
+    border-top: 2px solid var(--white);
+  }
+
+  footer p {
+    color: var(--white);
+    opacity: 1;
+  }
+
+  footer .company-name {
+    color: var(--white);
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  footer,
+  footer::before,
+  footer p,
+  footer .company-name {
+    animation: none;
+    transition: none;
+  }
+
+  footer p:hover,
+  footer .company-name:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  footer {
+    background: var(--white) !important;
+    color: var(--gray-900) !important;
+    box-shadow: none !important;
+    animation: none !important;
+  }
+
+  footer::before {
+    display: none;
+  }
+
+  footer p,
+  footer .company-name {
+    color: var(--gray-900) !important;
+    text-shadow: none !important;
+  }
+}
