@@ -71,11 +71,15 @@ const Navbar = () => {
                 <li><Link className="dropdown-item" to="/services"><i className="fas fa-list me-2"></i> View All Services</Link></li>
               </ul>
             </li>
-     <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/career' ? 'active' : ''}`} to="/career">
-                <i className="fas fa-info-circle me-1"></i> Career
-              </Link>
-            </li>
+    <li className="nav-item">
+  <Link
+    className={`nav-link ${location.pathname === '/career' ? 'active' : ''}`}
+    to="/career"
+  >
+    <i className="fas fa-briefcase me-1"></i> Career
+  </Link>
+</li>
+
 
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">

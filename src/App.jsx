@@ -38,7 +38,10 @@ function App() {
             <Route path="/website-redesign" element={<WebsiteRedesign />} />
             <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/creative-design" element={<CreativeDesign />} />
+            <Route path="/career" element={<Career />} />
+
           </Routes>
+
         </main>
 
         <Footer />
