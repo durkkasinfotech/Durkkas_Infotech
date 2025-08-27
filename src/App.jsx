@@ -18,10 +18,9 @@ import WebsiteDevelopment from "./pages/WebsiteDevelopment";
 import ECommerce from './pages/E-Commerce';
 import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
-import CareerPage from './pages/CareerPage';
-
-
 import CreativeDesign from './pages/CreativeDesign';
+import Career from './pages/Career';
+
 function App() {
   return (
     <Router basename="/DKITSITE/">
@@ -40,7 +39,7 @@ function App() {
             <Route path="/website-redesign" element={<WebsiteRedesign />} />
             <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/creative-design" element={<CreativeDesign />} />
-            <Route path="/career" element={<CareerPage />} />
+            <Route path="/career" element={<Career />} />
 
           </Routes>
 
