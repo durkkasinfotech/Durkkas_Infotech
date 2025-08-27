@@ -71,15 +71,12 @@ const Navbar = () => {
                 <li><Link className="dropdown-item" to="/services"><i className="fas fa-list me-2"></i> View All Services</Link></li>
               </ul>
             </li>
-           <a
-                className={`nav-link dropdown-toggle ${location.pathname.startsWith('/career') ? 'active' : ''}`}
-                href="#!"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i className="fas fa-cogs me-1"></i> Career
-              </a>
+     <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/career">
+                <i className="fas fa-info-circle me-1"></i> About
+              </Link>
+            </li>
+
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">
                 <i className="fas fa-envelope me-1"></i> Contact
