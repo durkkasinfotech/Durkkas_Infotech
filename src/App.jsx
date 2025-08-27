@@ -19,7 +19,7 @@ import ECommerce from './pages/E-Commerce';
 import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
 import CreativeDesign from './pages/CreativeDesign';
-import Career from './pages/Career'
+import Career from './pages/Career';
 
 function App() {
   return (
