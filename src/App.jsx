@@ -20,14 +20,13 @@ import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
 import CreativeDesign from './pages/CreativeDesign';
 
-
 function App() {
   return (
-    <Router>
+    <Router basename="/DKITSITE/">
       <div className="App">
         <Navbar />
         <SocialMediaSidebar />
-        
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -35,14 +34,13 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/website-development" element={<WebsiteDevelopment />} />
-             <Route path="/e-commerce" element={<ECommerce />} />
-             <Route path="/website-redesign" element={<WebsiteRedesign />} />
+            <Route path="/e-commerce" element={<ECommerce />} />
+            <Route path="/website-redesign" element={<WebsiteRedesign />} />
             <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/creative-design" element={<CreativeDesign />} />
-
           </Routes>
         </main>
-        
+
         <Footer />
       </div>
     </Router>
