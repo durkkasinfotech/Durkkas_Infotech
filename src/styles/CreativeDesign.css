@@ -1,0 +1,91 @@
+/* Container */
+.creative-design-container {
+  padding: 3rem 1.5rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.creative-design-content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title & Description */
+.creative-design-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.creative-design-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* Grid */
+.creative-design-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .creative-design-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.creative-design-card {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creative-design-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.creative-design-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.creative-design-card-text {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.creative-design-cta {
+  margin-top: 3rem;
+}
+
+.creative-design-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2563eb;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 12px rgba(37, 99, 235, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.creative-design-button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}

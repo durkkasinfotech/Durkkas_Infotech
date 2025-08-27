@@ -72,7 +72,7 @@ const Navbar = () => {
             <li className="nav-item dropdown">
               <a
                 className={`nav-link dropdown-toggle ${
-                  location.pathname === '/services' ? 'active' : ''
+                  location.pathname.startsWith('/services') ? 'active' : ''
                 }`}
                 href="#"
                 role="button"
@@ -84,31 +84,32 @@ const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/services#web-development">
+                  {/* 🔹 Direct link to WebsiteDevelopment.jsx page */}
+                  <Link className="dropdown-item" to="/website-development">
                     <i className="fas fa-code me-2"></i>
                     Website Development
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services#ecommerce">
+                  <Link className="dropdown-item" to="/e-commerce">
                     <i className="fas fa-shopping-cart me-2"></i>
                     E-Commerce Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services#redesign">
+                  <Link className="dropdown-item" to="/website-redesign">
                     <i className="fas fa-paint-brush me-2"></i>
                     Website Redesign
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services#social-media">
+                  <Link className="dropdown-item" to="/social-media-marketing">
                     <i className="fas fa-share-alt me-2"></i>
                     Social Media Marketing
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services#creatives">
+                  <Link className="dropdown-item" to="/creative-design">
                     <i className="fas fa-palette me-2"></i>
                     Creative Design
                   </Link>
@@ -123,7 +124,19 @@ const Navbar = () => {
               </ul>
             </li>
 
+           
+
+            {/* Career Section (replaces Call Now button) */}
             <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === '/career' ? 'active' : ''}`}
+                to="/career"
+              >
+                <i className="fas fa-briefcase me-1"></i>
+                Career
+              </Link>
+            </li>
+             <li className="nav-item">
               <Link
                 className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
                 to="/contact"
@@ -131,18 +144,6 @@ const Navbar = () => {
                 <i className="fas fa-envelope me-1"></i>
                 Contact
               </Link>
-            </li>
-
-            {/* Call Now */}
-            <li className="nav-item ms-lg-2">
-              <a
-                href="tel:+919361535050"
-                className="btn btn-accent"
-                style={{ backgroundColor: '#dc2626', borderColor: '#dc2626' }}
-              >
-                <i className="fas fa-phone me-1"></i>
-                Call Now
-              </a>
             </li>
           </ul>
         </div>

@@ -14,6 +14,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import WebsiteDevelopment from "./pages/WebsiteDevelopment";
+import ECommerce from './pages/E-Commerce';
+import WebsiteRedesign from './pages/WebsiteRedesign';
+import SocialMediaMarketing from './pages/SocialMediaMarketing';
+import CreativeDesign from './pages/CreativeDesign';
+
 
 function App() {
   return (
@@ -28,6 +34,12 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/website-development" element={<WebsiteDevelopment />} />
+             <Route path="/e-commerce" element={<ECommerce />} />
+             <Route path="/website-redesign" element={<WebsiteRedesign />} />
+            <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
+            <Route path="/creative-design" element={<CreativeDesign />} />
+
           </Routes>
         </main>
         

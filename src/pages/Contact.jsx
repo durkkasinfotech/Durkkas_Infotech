@@ -10,7 +10,7 @@ const Contact = () => {
           <div className="row">
             <div className="col-12 text-center">
               <h1 className="display-4 fw-bold mb-4 display-4 fw-bold mb-4 text-white">Contact Us</h1>
-              <p className="lead">Let's discuss your digital transformation journey</p>
+              <p className="lead text-white">Let's discuss your digital transformation journey</p>
             </div>
           </div>
         </div>

@@ -1,0 +1,10 @@
+{
+  "name": "dkitweb-site",
+  "version": "1.0.0",
+  "homepage": "/",
+  "description": "Durkkas Infotech company website",
+  "main": "index.html",
+  "scripts": {},
+  "author": "Durkkas Infotech",
+  "license": "ISC"
+}

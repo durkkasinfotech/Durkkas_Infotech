@@ -18,6 +18,19 @@ import python from "../assets/images/python.png";
 import typescript from "../assets/images/typescript.png";
 import vuejs from "../assets/images/vuejs.png";
 import wordpress from "../assets/images/wordpress-blue.png";
+
+// Import your images
+import client1 from "../assets/images/client (1).png";
+import client2 from "../assets/images/client (2).png";
+import client3 from "../assets/images/client (3).png";
+import client4 from "../assets/images/client (4).png";
+import client5 from "../assets/images/client (5).png";
+import client6 from "../assets/images/client (6).png";
+import client7 from "../assets/images/client (7).png";
+import client8 from "../assets/images/client (8).png";
+import client9 from "../assets/images/client (9).png";
+
+
 const Home = () => {
   return (
     <div>
@@ -297,10 +310,10 @@ const Home = () => {
     <Slider
       infinite
       autoplay
-      autoplaySpeed={1500} // slower & smooth (1.5s per slide)
-      speed={800} // smooth animation speed
-      slidesToShow={4} // show 4 at a time
-      slidesToScroll={1} // scroll one by one
+      autoplaySpeed={1500}
+      speed={800}
+      slidesToShow={4}
+      slidesToScroll={1}
       responsive={[
         { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 1 } },
         { breakpoint: 992, settings: { slidesToShow: 3, slidesToScroll: 1 } },
@@ -308,15 +321,17 @@ const Home = () => {
         { breakpoint: 576, settings: { slidesToShow: 1, slidesToScroll: 1 } }
       ]}
       arrows={false}
-      pauseOnHover={false} // keeps moving
+      pauseOnHover={false}
     >
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 1" /></div>
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 2" /></div>
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 3" /></div>
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 4" /></div>
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 5" /></div>
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 6" /></div>
-      <div className="px-3"><img src="/src/assets/images/logo.png" className="img-fluid" alt="Client 7" /></div>
+      <div className="px-3"><img src={client1} className="img-fluid" alt="Client 1" /></div>
+      <div className="px-3"><img src={client2} className="img-fluid" alt="Client 2" /></div>
+      <div className="px-3"><img src={client3} className="img-fluid" alt="Client 3" /></div>
+      <div className="px-3"><img src={client4} className="img-fluid" alt="Client 4" /></div>
+      <div className="px-3"><img src={client5} className="img-fluid" alt="Client 5" /></div>
+      <div className="px-3"><img src={client6} className="img-fluid" alt="Client 6" /></div>
+      <div className="px-3"><img src={client7} className="img-fluid" alt="Client 7" /></div>
+      <div className="px-3"><img src={client8} className="img-fluid" alt="Client 8" /></div>
+      <div className="px-3"><img src={client9} className="img-fluid" alt="Client 9" /></div>
     </Slider>
   </div>
 </section>
