@@ -7,11 +7,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      // If user scrolls more than 50px, change navbar style
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -26,7 +22,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link className="navbar-brand" to="/">
           <img
-            src="/src/assets/images/logo.png"
+            src={`${process.env.PUBLIC_URL}/logo.png`}
             alt="Durkkas InfoTech Logo"
             className="navbar-logo me-2"
           />
@@ -74,7 +70,7 @@ const Navbar = () => {
                 className={`nav-link dropdown-toggle ${
                   location.pathname.startsWith('/services') ? 'active' : ''
                 }`}
-                href="#"
+                href="#!"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -84,7 +80,6 @@ const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  {/* 🔹 Direct link to WebsiteDevelopment.jsx page */}
                   <Link className="dropdown-item" to="/website-development">
                     <i className="fas fa-code me-2"></i>
                     Website Development
@@ -114,7 +109,9 @@ const Navbar = () => {
                     Creative Design
                   </Link>
                 </li>
-                <li><hr className="dropdown-divider" /></li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
                 <li>
                   <Link className="dropdown-item" to="/services">
                     <i className="fas fa-list me-2"></i>
@@ -124,19 +121,10 @@ const Navbar = () => {
               </ul>
             </li>
 
-           
+          
 
-            {/* Career Section (replaces Call Now button) */}
+            {/* Contact */}
             <li className="nav-item">
-              <Link
-                className={`nav-link ${location.pathname === '/career' ? 'active' : ''}`}
-                to="/career"
-              >
-                <i className="fas fa-briefcase me-1"></i>
-                Career
-              </Link>
-            </li>
-             <li className="nav-item">
               <Link
                 className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
                 to="/contact"
@@ -153,3 +141,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
