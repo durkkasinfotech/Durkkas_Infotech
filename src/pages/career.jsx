@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
-import "../styles/career.css";
+import "../styles/Career.css";
 
 const CareerPage = () => {
   const [showForm, setShowForm] = useState(false);

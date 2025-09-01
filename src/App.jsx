@@ -20,7 +20,6 @@ import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
 import CreativeDesign from './pages/CreativeDesign';
 import Career from './pages/Career';
-
 function App() {
   return (
     // ❌ Remove basename for localhost
