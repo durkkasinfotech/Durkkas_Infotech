@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
-import emailjs from "emailjs-com";
-import "../styles/Career.css";
+import emailjs from "@emailjs/browser"; // ✅ use correct package
+import "../styles/Career.css"; // You can rename to JoinUs.css later if you want
 
-const Career = () => {
+const JoinUs = () => {
   const [showForm, setShowForm] = useState(false);
   const formRef = useRef(null);
 
@@ -14,8 +14,13 @@ const Career = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Inject current time into hidden input before sending
-    formRef.current.time.value = new Date().toLocaleString();
+    if (formRef.current) {
+      // ✅ Safely set time
+      const timeInput = formRef.current.querySelector("input[name='time']");
+      if (timeInput) {
+        timeInput.value = new Date().toLocaleString();
+      }
+    }
 
     emailjs
       .sendForm(
@@ -104,4 +109,4 @@ const Career = () => {
   );
 };
 
-export default Career;
+export default JoinUs;

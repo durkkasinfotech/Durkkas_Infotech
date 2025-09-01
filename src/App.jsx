@@ -19,7 +19,7 @@ import ECommerce from './pages/ECommerce';
 import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
 import CreativeDesign from './pages/CreativeDesign';
-import Career from "./pages/Career";
+import JoinUs from './pages/JoinUs';
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
             <Route path="/website-redesign" element={<WebsiteRedesign />} />
             <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/creative-design" element={<CreativeDesign />} />
-            <Route path="/career" element={<Career />} />
+            <Route path="/join-us" element={<JoinUs />} />
           </Routes>
         </main>
 
