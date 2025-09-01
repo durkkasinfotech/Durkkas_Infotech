@@ -19,8 +19,7 @@ import ECommerce from './pages/ECommerce';
 import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
 import CreativeDesign from './pages/CreativeDesign';
-import JoinUs from './pages/JoinUs';
-
+import Career from "./pages/Career";
 function App() {
   return (
     // ❌ Remove basename for localhost
@@ -40,7 +39,7 @@ function App() {
             <Route path="/website-redesign" element={<WebsiteRedesign />} />
             <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/creative-design" element={<CreativeDesign />} />
-            <Route path="/join-us" element={<JoinUs />} />
+          <Route path="/career" element={<Career />} />
           </Routes>
         </main>
 

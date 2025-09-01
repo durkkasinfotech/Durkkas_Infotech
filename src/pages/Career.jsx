@@ -1,8 +1,4 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser"; // ✅ use correct package
-import "../styles/Career.css"; // You can rename to JoinUs.css later if you want
-
-const JoinUs = () => {
+const Career = () => {
   const [showForm, setShowForm] = useState(false);
   const formRef = useRef(null);
 
@@ -15,7 +11,6 @@ const JoinUs = () => {
     e.preventDefault();
 
     if (formRef.current) {
-      // ✅ Safely set time
       const timeInput = formRef.current.querySelector("input[name='time']");
       if (timeInput) {
         timeInput.value = new Date().toLocaleString();
@@ -24,14 +19,14 @@ const JoinUs = () => {
 
     emailjs
       .sendForm(
-        "service_scb88bd", // ✅ Your EmailJS Service ID
-        "template_vqjv0f2", // ✅ Your EmailJS Template ID
-        formRef.current, // ✅ Form reference
-        "iTVRB1Q97TK1ApnXt" // ✅ Your EmailJS Public Key
+        "service_scb88bd",
+        "template_vqjv0f2",
+        formRef.current,
+        "iTVRB1Q97TK1ApnXt"
       )
       .then(() => {
         alert("✅ Application sent successfully!");
-        e.target.reset(); // Reset form after success
+        e.target.reset();
         setShowForm(false);
       })
       .catch((error) => {
@@ -109,4 +104,4 @@ const JoinUs = () => {
   );
 };
 
-export default JoinUs;
+export default Career;
