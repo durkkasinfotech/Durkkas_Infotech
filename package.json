@@ -9,9 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "engines": {
-    "node": "22.14.0"
-  },
+  
   "dependencies": {
     "bootstrap": "^5.3.7",
     "emailjs-com": "^3.2.0",
