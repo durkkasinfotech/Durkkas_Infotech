@@ -15,7 +15,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import WebsiteDevelopment from "./pages/WebsiteDevelopment";
-import ECommerce from './pages/E-Commerce';
+import ECommerce from './pages/ECommerce';
 import WebsiteRedesign from './pages/WebsiteRedesign';
 import SocialMediaMarketing from './pages/SocialMediaMarketing';
 import CreativeDesign from './pages/CreativeDesign';
