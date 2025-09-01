@@ -1,3 +1,7 @@
+import React, { useState, useRef } from "react";
+import emailjs from "emailjs-com";
+import "../styles/Career.css";
+
 const Career = () => {
   const [showForm, setShowForm] = useState(false);
   const formRef = useRef(null);
@@ -10,23 +14,19 @@ const Career = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (formRef.current) {
-      const timeInput = formRef.current.querySelector("input[name='time']");
-      if (timeInput) {
-        timeInput.value = new Date().toLocaleString();
-      }
-    }
+    // Inject current time into hidden input before sending
+    formRef.current.time.value = new Date().toLocaleString();
 
     emailjs
       .sendForm(
-        "service_scb88bd",
-        "template_vqjv0f2",
-        formRef.current,
-        "iTVRB1Q97TK1ApnXt"
+        "service_scb88bd", // ✅ Your EmailJS Service ID
+        "template_vqjv0f2", // ✅ Your EmailJS Template ID
+        formRef.current, // ✅ Form reference
+        "iTVRB1Q97TK1ApnXt" // ✅ Your EmailJS Public Key
       )
       .then(() => {
         alert("✅ Application sent successfully!");
-        e.target.reset();
+        e.target.reset(); // Reset form after success
         setShowForm(false);
       })
       .catch((error) => {
