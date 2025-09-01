@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import "../styles/Career.css";
 
-const CareerPage = () => {
+const Career = () => {
   const [showForm, setShowForm] = useState(false);
   const formRef = useRef(null);
 
@@ -104,4 +104,4 @@ const CareerPage = () => {
   );
 };
 
-export default CareerPage;
+export default Career;
