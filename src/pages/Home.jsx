@@ -44,9 +44,17 @@ const Home = () => {
                   <i className="fas fa-rocket"></i>
                 </div> */}
               </div>
-              <h1 className="display-3 fw-bold mb-4">
-                Crafting Websites. Shaping Identities. Driving Growth.
-              </h1>
+  <h1
+  style={{
+    animation: "popBlink 1.5s ease-in-out infinite",
+    display: "inline-block",
+    color: "white"
+  }}
+>
+  Crafting Websites. Shaping Identities. Driving Growth.
+</h1>
+
+
               <p className="lead mb-4 fs-4">
                 We Durkkas InfoTech offers comprehensive digital solutions, ranging from innovative social media tactics to web building.
               </p>

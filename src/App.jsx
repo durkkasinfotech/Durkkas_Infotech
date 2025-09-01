@@ -23,7 +23,8 @@ import Career from './pages/Career';
 
 function App() {
   return (
-    <Router basename="/DKITSITE/">
+    // ❌ Remove basename for localhost
+    <Router>
       <div className="App">
         <Navbar />
         <SocialMediaSidebar />
@@ -40,9 +41,7 @@ function App() {
             <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
             <Route path="/creative-design" element={<CreativeDesign />} />
             <Route path="/career" element={<Career />} />
-
           </Routes>
-
         </main>
 
         <Footer />

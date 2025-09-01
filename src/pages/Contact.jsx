@@ -308,14 +308,7 @@ const Contact = () => {
               </p>
               <p className="fs-5 mb-4">This is where your trip begins.</p>
               <div className="d-flex gap-3 justify-content-center flex-wrap">
-                <a href="tel:+919361535050" className="btn btn-light btn-lg">
-                  <i className="fas fa-phone me-2"></i>
-                  Call Now
-                </a>
-                <a href="mailto:contact@durkkasinfo.tech" className="btn btn-outline-light btn-lg">
-                  <i className="fas fa-envelope me-2"></i>
-                  Email Us
-                </a>
+              
               </div>
             </div>
           </div>
