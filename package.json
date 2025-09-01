@@ -1,9 +1,7 @@
 {
-   "name": "dkitweb-site",
+"name": "dkitweb-site",
   "version": "1.0.0",
-  "description": "Durkkas Infotech company website",
-  "type": "module",  
-  "main": "index.html",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +9,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-
+  "engines": {
+    "node": "22.14.0"
+  },
   "dependencies": {
     "bootstrap": "^5.3.7",
     "emailjs-com": "^3.2.0",
