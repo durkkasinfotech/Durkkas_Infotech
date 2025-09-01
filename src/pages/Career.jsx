@@ -14,19 +14,23 @@ const Career = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Inject current time into hidden input before sending
-    formRef.current.time.value = new Date().toLocaleString();
+    if (formRef.current) {
+      const timeInput = formRef.current.querySelector("input[name='time']");
+      if (timeInput) {
+        timeInput.value = new Date().toLocaleString();
+      }
+    }
 
     emailjs
       .sendForm(
-        "service_scb88bd", // ✅ Your EmailJS Service ID
-        "template_vqjv0f2", // ✅ Your EmailJS Template ID
-        formRef.current, // ✅ Form reference
-        "iTVRB1Q97TK1ApnXt" // ✅ Your EmailJS Public Key
+        "service_scb88bd",      // ✅ Replace with your EmailJS service ID
+        "template_vqjv0f2",     // ✅ Replace with your template ID
+        formRef.current,
+        "iTVRB1Q97TK1ApnXt"     // ✅ Replace with your public key
       )
       .then(() => {
         alert("✅ Application sent successfully!");
-        e.target.reset(); // Reset form after success
+        e.target.reset();
         setShowForm(false);
       })
       .catch((error) => {
