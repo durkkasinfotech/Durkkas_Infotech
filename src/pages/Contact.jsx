@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h1 className="display-4 fw-bold mb-4 display-4 fw-bold mb-4 text-white">Contact Us</h1>
+              <h1 className="display-4 fw-bold mb-4 text-white">Contact Us</h1>
               <p className="lead text-white">Let's discuss your digital transformation journey</p>
             </div>
           </div>
@@ -23,39 +23,43 @@ const Contact = () => {
 
       {/* Google Map with clickable link */}
       <div className="col-lg-4 mb-4">
-        <div className="card h-100 text-center">
-          <a
-            href="https://maps.app.goo.gl/DGK1dvb78uWb7wUu7"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "block", textDecoration: "none" }}
-          >
-            <div className="card-body p-0">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.8084258408474!2d78.09405167454602!3d9.517828890523952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b013fa3481d9d01%3A0x16f7ff7b2f5b0c9e!2sDurkkas%20InfoTech!5e0!3m2!1sen!2sin!4v1691489234567!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                style={{ border: 0, pointerEvents: "none" }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Durkkas InfoTech Location"
-              ></iframe>
+        <div className="card h-100">
+          <div className="card-body p-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.8084258408474!2d78.09405167454602!3d9.517828890523952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b013fa3481d9d01%3A0x16f7ff7b2f5b0c9e!2sDurkkas%20InfoTech!5e0!3m2!1sen!2sin!4v1691489234567!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Durkkas InfoTech Location"
+            ></iframe>
+            <div className="p-3 text-center">
+              <a
+                href="https://maps.app.goo.gl/DGK1dvb78uWb7wUu7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-sm"
+              >
+                <i className="fas fa-external-link-alt me-2"></i>
+                Open Location
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
 
       {/* Address Card */}
       <div className="col-lg-4 mb-4">
-        <div className="card h-100 text-center d-flex justify-content-center align-items-center">
-          <div className="card-body p-4">
+        <div className="card h-100">
+          <div className="card-body p-4 text-center">
             <div className="mb-3">
               <i className="fas fa-map-marker-alt fa-3x text-primary"></i>
             </div>
-            <h5 className="card-title">Our Location</h5>
-            <p className="card-text mb-0">
-              Durkkas InfoTech<br />
+            <h5 className="card-title text-center">Our Location</h5>
+            <p className="card-text mb-0 text-center" style={{ textAlign: 'justify' }}>
+              <strong>Durkkas InfoTech</strong><br />
               58, MDR Nagar North,<br />
               SBK College Road,<br />
               Aruppukottai - 626101<br />
@@ -66,30 +70,49 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Email + Phone Card */}
+      {/* Contact Info Card */}
       <div className="col-lg-4 mb-4">
-        <div className="card h-100 text-center d-flex justify-content-center align-items-center">
+        <div className="card h-100">
           <div className="card-body p-4">
-            <div className="mb-3">
-              <i className="fas fa-envelope fa-3x text-primary"></i>
+            <div className="text-center mb-4">
+              <i className="fas fa-envelope fa-3x text-primary mb-3"></i>
+              <h5 className="card-title">Get in Touch</h5>
             </div>
-            <h5 className="card-title">Get in Touch</h5>
-            <p className="card-text">
-              <a href="mailto:contact@durkkasinfo.tech" className="text-decoration-none">
-              EMAIL:  contact@durkkasinfo.tech
-              </a>
-            </p>
-            <p className="card-text text-muted">We'll respond within 24 hours</p>
+            
+            <div className="mb-4">
+              <h6 className="text-primary mb-2">
+                <i className="fas fa-envelope me-2"></i>Email
+              </h6>
+              <p className="mb-1">
+                <a href="mailto:contact@durkkasinfo.tech" className="text-decoration-none">
+                  contact@durkkasinfo.tech
+                </a>
+              </p>
+              <small className="text-muted">We'll respond within 24 hours</small>
+            </div>
 
-            <div className="mb-3 mt-4">
-              <i className="fas fa-phone fa-3x text-primary"></i>
+            <div className="mb-4">
+              <h6 className="text-primary mb-2">
+                <i className="fas fa-phone me-2"></i>Phone Numbers
+              </h6>
+              <p className="mb-1">
+                <a href="tel:+919361535050" className="text-decoration-none">
+                  <i className="fas fa-mobile-alt me-2"></i>+91 93 61 53 50 50
+                </a>
+              </p>
+              <p className="mb-1">
+                <a href="tel:04562690272" className="text-decoration-none">
+                  <i className="fas fa-phone me-2"></i>04562690272
+                </a>
+              </p>
             </div>
-            <p className="card-text">
-              <a href="tel:+919361535050" className="text-decoration-none">
-               Mobile Number: +91 93 61 53 50 50 <br/>Tele-Phone No   :  04562690272
-              </a>
-            </p>
-            <p className="card-text text-muted">Mon - Fri: 9:00 AM - 6:00 PM</p>
+
+            <div className="text-center">
+              <h6 className="text-primary mb-2">
+                <i className="fas fa-clock me-2"></i>Business Hours
+              </h6>
+              <p className="mb-0 text-muted">Mon - Fri: 9:00 AM - 6:00 PM</p>
+            </div>
           </div>
         </div>
       </div>
@@ -109,9 +132,7 @@ const Contact = () => {
       </div>
     </div>
   </div>
-</section>
-
-
+      </section>
 
       {/* Contact Form */}
       <section className="py-5 bg-primary text-white">
@@ -120,11 +141,11 @@ const Contact = () => {
             <div className="col-lg-8 mx-auto">
               <div className="card shadow">
                 <div className="card-body p-5">
-                  <h2 className="card-title text-center mb-4">Send Us a Message</h2>
+                  <h2 className="card-title text-center mb-4 text-white">Send Us a Message</h2>
                   <form>
                     <div className="row g-3">
                       <div className="col-md-6">
-                        <label htmlFor="firstName" className="form-label">First Name *</label>
+                        <label htmlFor="firstName" className="form-label text-white">First Name *</label>
                         <input 
                           type="text" 
                           className="form-control" 
@@ -134,7 +155,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="col-md-6">
-                        <label htmlFor="lastName" className="form-label">Last Name *</label>
+                        <label htmlFor="lastName" className="form-label text-white">Last Name *</label>
                         <input 
                           type="text" 
                           className="form-control" 
@@ -144,7 +165,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="col-md-6">
-                        <label htmlFor="email" className="form-label">Email Address *</label>
+                        <label htmlFor="email" className="form-label text-white">Email Address *</label>
                         <input 
                           type="email" 
                           className="form-control" 
@@ -154,7 +175,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="col-md-6">
-                        <label htmlFor="phone" className="form-label">Phone Number *</label>
+                        <label htmlFor="phone" className="form-label text-white">Phone Number *</label>
                         <input 
                           type="tel" 
                           className="form-control" 
@@ -164,7 +185,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="col-12">
-                        <label htmlFor="company" className="form-label">Company Name</label>
+                        <label htmlFor="company" className="form-label text-white">Company Name</label>
                         <input 
                           type="text" 
                           className="form-control" 
@@ -173,7 +194,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="col-12">
-                        <label htmlFor="service" className="form-label">Service Required *</label>
+                        <label htmlFor="service" className="form-label text-white">Service Required *</label>
                         <select className="form-select" id="service" required>
                           <option value="">Select a service</option>
                           <option value="website-development">Website Development</option>
@@ -187,7 +208,7 @@ const Contact = () => {
                         </select>
                       </div>
                       <div className="col-12">
-                        <label htmlFor="budget" className="form-label">Project Budget</label>
+                        <label htmlFor="budget" className="form-label text-white">Project Budget</label>
                         <select className="form-select" id="budget">
                           <option value="">Select budget range (optional)</option>
                           <option value="under-50k">Under ₹50,000</option>
@@ -198,7 +219,7 @@ const Contact = () => {
                         </select>
                       </div>
                       <div className="col-12">
-                        <label htmlFor="timeline" className="form-label">Project Timeline</label>
+                        <label htmlFor="timeline" className="form-label text-white">Project Timeline</label>
                         <select className="form-select" id="timeline">
                           <option value="">Select timeline (optional)</option>
                           <option value="urgent">ASAP (Rush Job)</option>
@@ -209,7 +230,7 @@ const Contact = () => {
                         </select>
                       </div>
                       <div className="col-12">
-                        <label htmlFor="message" className="form-label">Tell us about your project *</label>
+                        <label htmlFor="message" className="form-label text-white">Tell us about your project *</label>
                         <textarea 
                           className="form-control" 
                           id="message" 
@@ -225,7 +246,7 @@ const Contact = () => {
                             type="checkbox" 
                             id="newsletter" 
                           />
-                          <label className="form-check-label" htmlFor="newsletter">
+                          <label className="form-check-label text-white" htmlFor="newsletter">
                             I would like to receive updates about Durkkas InfoTech services and industry insights
                           </label>
                         </div>

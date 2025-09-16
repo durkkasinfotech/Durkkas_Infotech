@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Services.css';
 
 const Services = () => {
@@ -31,7 +32,7 @@ const Services = () => {
                     We design adaptable, contemporary websites that are suited to your company's objectives and brand. 
                     We prioritise a smooth user experience, speed, and clean design from conception to launch.
                   </p>
-                  <a href="#website-dev" className="btn btn-outline-primary">Learn More</a>
+                  <Link to="/website-development" className="btn btn-outline-primary">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -47,7 +48,7 @@ const Services = () => {
                     Use robust, performance-driven e-commerce platforms to launch your company online. 
                     We guarantee conversion-driven design, safe payment gateways, and easy navigation.
                   </p>
-                  <a href="#ecommerce" className="btn btn-outline-primary">Learn More</a>
+                  <Link to="/e-commerce" className="btn btn-outline-primary">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -63,7 +64,7 @@ const Services = () => {
                     A website that is outdated? We also take care of routine maintenance and give it a new look. 
                     Maintain complete functionality, security, and updates without exerting any effort.
                   </p>
-                  <a href="#redesign" className="btn btn-outline-primary">Learn More</a>
+                  <Link to="/website-redesign" className="btn btn-outline-primary">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -79,7 +80,7 @@ const Services = () => {
                     Increase your online visibility by implementing smart social media strategies and planning. 
                     We oversee advertisements, creatives, and content to support the growth and engagement of your business.
                   </p>
-                  <a href="#social-media" className="btn btn-outline-primary">Learn More</a>
+                  <Link to="/social-media-marketing" className="btn btn-outline-primary">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -95,7 +96,7 @@ const Services = () => {
                     We ensure that your brand gets the attention it deserves. 
                     We create images that engage and convert, whether they are posters, logos, or advertising creatives.
                   </p>
-                  <a href="#creatives" className="btn btn-outline-primary">Learn More</a>
+                  <Link to="/creative-design" className="btn btn-outline-primary">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -123,21 +124,35 @@ const Services = () => {
                 and confidently and clearly support your business objectives.
               </p>
             </div>
-            <div className="col-lg-6">
-              <div className="card bg-primary text-white">
-                <div className="card-body p-4">
-                  <h5>Key Features:</h5>
-                  <ul className="list-unstyled">
-                    <li><i className="fas fa-check me-2"></i> Mobile-responsive design</li>
-                    <li><i className="fas fa-check me-2"></i> Fast loading speeds</li>
-                    <li><i className="fas fa-check me-2"></i> SEO optimized</li>
-                    <li><i className="fas fa-check me-2"></i> User-friendly navigation</li>
-                    <li><i className="fas fa-check me-2"></i> Custom brand representation</li>
-                    <li><i className="fas fa-check me-2"></i> Secure and reliable</li>
-                  </ul>
+              <div className="col-lg-6">
+                <div className="card bg-primary text-white shadow-lg" style={{ background: 'var(--primary-blue) !important' }}>
+                  <div className="card-body p-4">
+                    <h5 className="fw-bold mb-3">
+                      <i className="fas fa-star me-2"></i>Key Features:
+                    </h5>
+                    <ul className="list-unstyled">
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Mobile-responsive design
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Fast loading speeds
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> SEO optimized
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> User-friendly navigation
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Custom brand representation
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Secure and reliable
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -161,21 +176,35 @@ const Services = () => {
                 your online store will convert rather than solely exist.
               </p>
             </div>
-            <div className="col-lg-6 order-lg-1">
-              <div className="card bg-success text-white">
-                <div className="card-body p-4">
-                  <h5>E-Commerce Features:</h5>
-                  <ul className="list-unstyled">
-                    <li><i className="fas fa-check me-2"></i> Secure payment gateways</li>
-                    <li><i className="fas fa-check me-2"></i> Inventory management</li>
-                    <li><i className="fas fa-check me-2"></i> Shopping cart optimization</li>
-                    <li><i className="fas fa-check me-2"></i> Product catalog design</li>
-                    <li><i className="fas fa-check me-2"></i> Order tracking system</li>
-                    <li><i className="fas fa-check me-2"></i> Mobile commerce ready</li>
-                  </ul>
+              <div className="col-lg-6 order-lg-1">
+                <div className="card bg-success text-white shadow-lg" style={{ background: 'var(--bs-success) !important' }}>
+                  <div className="card-body p-4">
+                    <h5 className="fw-bold mb-3">
+                      <i className="fas fa-shopping-cart me-2"></i>E-Commerce Features:
+                    </h5>
+                    <ul className="list-unstyled">
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Secure payment gateways
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Inventory management
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Shopping cart optimization
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Product catalog design
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Order tracking system
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-white"></i> Mobile commerce ready
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -198,21 +227,35 @@ const Services = () => {
                 You prioritise on your business. We'll ensure that your website functions properly at all times.
               </p>
             </div>
-            <div className="col-lg-6">
-              <div className="card bg-warning text-dark">
-                <div className="card-body p-4">
-                  <h5>Redesign & Maintenance:</h5>
-                  <ul className="list-unstyled">
-                    <li><i className="fas fa-check me-2"></i> Modern design updates</li>
-                    <li><i className="fas fa-check me-2"></i> Performance optimization</li>
-                    <li><i className="fas fa-check me-2"></i> Security updates</li>
-                    <li><i className="fas fa-check me-2"></i> Content management</li>
-                    <li><i className="fas fa-check me-2"></i> Regular backups</li>
-                    <li><i className="fas fa-check me-2"></i> 24/7 monitoring</li>
-                  </ul>
+              <div className="col-lg-6">
+                <div className="card bg-warning text-dark shadow-lg" style={{ background: 'var(--bs-warning) !important' }}>
+                  <div className="card-body p-4">
+                    <h5 className="fw-bold mb-3">
+                      <i className="fas fa-tools me-2"></i>Redesign & Maintenance:
+                    </h5>
+                    <ul className="list-unstyled">
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-dark"></i> Modern design updates
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-dark"></i> Performance optimization
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-dark"></i> Security updates
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-dark"></i> Content management
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-dark"></i> Regular backups
+                      </li>
+                      <li className="mb-2">
+                        <i className="fas fa-check me-2 text-dark"></i> 24/7 monitoring
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -224,23 +267,23 @@ const Services = () => {
             <div className="col-lg-8 mx-auto">
               <div className="card">
                 <div className="card-body p-4">
-                  <h3 className="card-title text-dark text-center mb-4">Get a Quote for Your Project</h3>
+                  <h3 className="card-title text-white text-center mb-4">Get a Quote for Your Project</h3>
                   <form>
                     <div className="row g-3">
                       <div className="col-md-6">
-                        <label htmlFor="name" className="form-label text-dark">Name *</label>
+                        <label htmlFor="name" className="form-label text-white">Name *</label>
                         <input type="text" className="form-control" id="name" required />
                       </div>
                       <div className="col-md-6">
-                        <label htmlFor="contact" className="form-label text-dark">Contact Number *</label>
+                        <label htmlFor="contact" className="form-label text-white">Contact Number *</label>
                         <input type="tel" className="form-control" id="contact" required />
                       </div>
                       <div className="col-12">
-                        <label htmlFor="email" className="form-label text-dark">e-Mail ID *</label>
+                        <label htmlFor="email" className="form-label text-white">e-Mail ID *</label>
                         <input type="email" className="form-control" id="email" required />
                       </div>
                       <div className="col-12">
-                        <label htmlFor="service" className="form-label text-dark">Service Required *</label>
+                        <label htmlFor="service" className="form-label text-white">Service Required *</label>
                         <select className="form-control" id="service" required>
                           <option value="">Select a service</option>
                           <option value="website">Website Development</option>
@@ -252,7 +295,7 @@ const Services = () => {
                         </select>
                       </div>
                       <div className="col-12">
-                        <label htmlFor="requirement" className="form-label text-dark">Tell your Requirement *</label>
+                        <label htmlFor="requirement" className="form-label text-white">Tell your Requirement *</label>
                         <textarea className="form-control" id="requirement" rows="4" required></textarea>
                       </div>
                       <div className="col-12 text-center">

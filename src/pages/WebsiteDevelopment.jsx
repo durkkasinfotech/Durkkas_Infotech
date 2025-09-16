@@ -44,10 +44,10 @@ const WebsiteDevelopment = () => {
                     that guarantees performance, aesthetics, and scalability.
                   </p>
                   <ul className="list-unstyled mt-3">
-                    <li>✅ Clear strategy & roadmap</li>
-                    <li>✅ Mobile-first design principles</li>
-                    <li>✅ SEO & speed optimization</li>
-                    <li>✅ Future-ready tech stack</li>
+                    <li><i className="fas fa-check-circle text-success me-2"></i>Clear strategy & roadmap</li>
+                    <li><i className="fas fa-check-circle text-success me-2"></i>Mobile-first design principles</li>
+                    <li><i className="fas fa-check-circle text-success me-2"></i>SEO & speed optimization</li>
+                    <li><i className="fas fa-check-circle text-success me-2"></i>Future-ready tech stack</li>
                   </ul>
                 </div>
               </div>

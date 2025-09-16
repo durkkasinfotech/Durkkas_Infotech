@@ -8,6 +8,7 @@ import './styles/App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SocialMediaSidebar from './components/SocialMediaSidebar';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -22,9 +23,10 @@ import CreativeDesign from './pages/CreativeDesign';
 import Career from "./pages/Career";
 function App() {
   return (
-    // ❌ Remove basename for localhost
+    // Remove basename for localhost
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
         <SocialMediaSidebar />
 

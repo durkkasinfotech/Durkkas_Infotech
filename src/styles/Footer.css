@@ -8,7 +8,7 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 4rem;
+  margin-top: 2rem;
   position: relative;
   overflow: hidden;
   animation: footerGlow 4s ease-in-out infinite alternate;
@@ -56,27 +56,15 @@ footer p:hover {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Copyright Symbol Styling */
-footer p::before {
-  content: '©';
-  margin-right: 0.25rem;
-  font-weight: 700;
-  color: var(--secondary-blue);
-  text-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
-}
+/* Copyright Symbol Styling - Removed blue color */
 
-/* Company Name Highlight */
-footer .company-name {
-  color: var(--secondary-blue);
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
-  transition: all 0.3s ease;
-}
+/* Company Name Highlight - Removed blue color */
 
-footer .company-name:hover {
-  color: var(--light-blue);
-  text-shadow: 0 0 15px rgba(219, 234, 254, 0.6);
-  transform: scale(1.02);
+/* Copyright Text Styling */
+footer .copyright-text {
+  color: var(--white) !important;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 /* Responsive Design */

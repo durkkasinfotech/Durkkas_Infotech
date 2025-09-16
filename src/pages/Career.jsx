@@ -24,18 +24,18 @@ const Career = () => {
 
     emailjs
       .sendForm(
-        "service_scb88bd",      // ✅ Replace with your EmailJS service ID
-        "template_vqjv0f2",     // ✅ Replace with your template ID
+        "service_scb88bd",      // Replace with your EmailJS service ID
+        "template_vqjv0f2",     // Replace with your template ID
         formRef.current,
-        "iTVRB1Q97TK1ApnXt"     // ✅ Replace with your public key
+        "iTVRB1Q97TK1ApnXt"     // Replace with your public key
       )
       .then(() => {
-        alert("✅ Application sent successfully!");
+        alert("✓ Application sent successfully!");
         e.target.reset();
         setShowForm(false);
       })
       .catch((error) => {
-        console.error("❌ Email sending failed:", error);
+        console.error("✗ Email sending failed:", error);
         alert("Something went wrong. Please try again later.");
       });
   };

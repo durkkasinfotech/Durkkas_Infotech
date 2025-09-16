@@ -19,6 +19,23 @@ import typescript from "../assets/images/typescript.png";
 import vuejs from "../assets/images/vuejs.png";
 import wordpress from "../assets/images/wordpress-blue.png";
 
+// Import new technology logos
+import canva from "../assets/images/canva.png";
+import catalyst from "../assets/images/catalyst.png";
+import checkout from "../assets/images/checkout.png";
+import coreldraw from "../assets/images/coreldraw.png";
+import googleads from "../assets/images/googleads.png";
+import icon from "../assets/images/icon.png";
+import illustrator from "../assets/images/illustrator.png";
+import linkedinad from "../assets/images/linkedinad.png";
+import meta from "../assets/images/meta.png";
+import paypal from "../assets/images/paypal.jpg";
+import ps from "../assets/images/ps.png";
+import razorpay from "../assets/images/razorpay.png";
+import stripe from "../assets/images/stripe.png";
+import zohoforms from "../assets/images/zoho forms.png";
+import zohosites from "../assets/images/zohosites.png";
+
 // Import your images
 import client1 from "../assets/images/client (1).png";
 import client2 from "../assets/images/client (2).png";
@@ -46,7 +63,7 @@ const Home = () => {
               </div>
   <h1
   style={{
-    animation: "popBlink 1.5s ease-in-out infinite",
+    animation: "popBlink3Times 3s ease-in-out",
     display: "inline-block",
     color: "white"
   }}
@@ -69,30 +86,50 @@ const Home = () => {
                 </a>
               </div>
               
-              {/* Professional Stats Section */}
-              <div className="row mt-5 pt-5">
+              {/* Professional Stats Section - White Cards */}
+              <div className="row mt-5 justify-content-center">
                 <div className="col-md-3 col-6 mb-3">
-                  <div className="text-center">
-                    <div className="h2 fw-bold mb-1 text-accent">72+</div>
-                    <div className="text-white-50">Projects Completed</div>
+                  <div className="card stats-card h-100">
+                    <div className="card-body text-center">
+                      <div className="stats-icon mb-3">
+                        <i className="fas fa-project-diagram"></i>
+                      </div>
+                      <div className="h2 fw-bold mb-2 text-primary">72+</div>
+                      <div className="text-muted">Projects Completed</div>
+                    </div>
                   </div>
                 </div>
                 <div className="col-md-3 col-6 mb-3">
-                  <div className="text-center">
-                    <div className="h2 fw-bold mb-1 text-accent">50+</div>
-                    <div className="text-white-50">Happy Clients</div>
+                  <div className="card stats-card h-100">
+                    <div className="card-body text-center">
+                      <div className="stats-icon mb-3">
+                        <i className="fas fa-users"></i>
+                      </div>
+                      <div className="h2 fw-bold mb-2 text-primary">50+</div>
+                      <div className="text-muted">Happy Clients</div>
+                    </div>
                   </div>
                 </div>
                 <div className="col-md-3 col-6 mb-3">
-                  <div className="text-center">
-                    <div className="h2 fw-bold mb-1 text-accent">12+</div>
-                    <div className="text-white-50">Years Experience</div>
+                  <div className="card stats-card h-100">
+                    <div className="card-body text-center">
+                      <div className="stats-icon mb-3">
+                        <i className="fas fa-calendar-alt"></i>
+                      </div>
+                      <div className="h2 fw-bold mb-2 text-primary">12+</div>
+                      <div className="text-muted">Years Experience</div>
+                    </div>
                   </div>
                 </div>
                 <div className="col-md-3 col-6 mb-3">
-                  <div className="text-center">
-                    <div className="h2 fw-bold mb-1 text-accent">24/7</div>
-                    <div className="text-white-50">Support</div>
+                  <div className="card stats-card h-100">
+                    <div className="card-body text-center">
+                      <div className="stats-icon mb-3">
+                        <i className="fas fa-headset"></i>
+                      </div>
+                      <div className="h2 fw-bold mb-2 text-primary">24/7</div>
+                      <div className="text-muted">Support</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -190,8 +227,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-                {/* Technologies Carousel Section */}
-<section className="py-5 bg-light">
+
+      {/* Technologies Carousel Section */}
+      <section className="py-5 bg-light">
   <div className="container">
     <h2 className="text-center fw-bold mb-4">Technologies We Expertise</h2>
     <Slider
@@ -211,7 +249,9 @@ const Home = () => {
     >
       {[
         bootstrap, cpanel, css3, django, html5, java, javascript,
-        jquery, nodejs, npm, postgresql, python, typescript, vuejs, wordpress
+        jquery, nodejs, npm, postgresql, python, typescript, vuejs, wordpress,
+        canva, catalyst, checkout, coreldraw, googleads, icon, illustrator,
+        linkedinad, meta, paypal, ps, razorpay, stripe, zohoforms, zohosites
       ].map((logo, index) => (
         <div
           key={index}
@@ -227,7 +267,7 @@ const Home = () => {
       ))}
     </Slider>
   </div>
-</section>
+      </section>
 
       {/* Professional Why Choose Us Section */}
       <section className="py-5 bg-primary">
@@ -286,22 +326,22 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6 slide-in-right">
-  <div className="card card-primary shadow-lg h-100">
+  <div className="card shadow-lg h-100" style={{ background: 'white' }}>
     <div className="card-body pt-3 px-5 pb-5"> {/* reduced top padding */}
      
-      <h3 className="card-title fw-bold mb-3">Our Mission</h3>
-      <p className="card-text mb-4">
+      <h3 className="card-title fw-bold mb-3 text-primary">Our Mission</h3>
+      <p className="card-text mb-4 text-dark">
         Our goal is to provide top-notch digital solutions that enable any company to succeed online.
         Our services, which range from creative marketing and content creation to responsive websites 
         and e-commerce businesses, are tailored to each client's specific requirements.
       </p>
       <div className="d-flex align-items-center">
         <div className="me-3">
-          <i className="fas fa-check-circle fa-2x text-accent"></i>
+          <i className="fas fa-check-circle fa-2x text-success"></i>
         </div>
         <div>
-          <h6 className="mb-1">Quality Assured</h6>
-          <p className="mb-0 small opacity-75">Every project meets our high standards</p>
+          <h6 className="mb-1 text-primary">Quality Assured</h6>
+          <p className="mb-0 small text-muted">Every project meets our high standards</p>
         </div>
       </div>
     </div>
@@ -331,15 +371,33 @@ const Home = () => {
       arrows={false}
       pauseOnHover={false}
     >
-      <div className="px-3"><img src={client1} className="img-fluid" alt="Client 1" /></div>
-      <div className="px-3"><img src={client2} className="img-fluid" alt="Client 2" /></div>
-      <div className="px-3"><img src={client3} className="img-fluid" alt="Client 3" /></div>
-      <div className="px-3"><img src={client4} className="img-fluid" alt="Client 4" /></div>
-      <div className="px-3"><img src={client5} className="img-fluid" alt="Client 5" /></div>
-      <div className="px-3"><img src={client6} className="img-fluid" alt="Client 6" /></div>
-      <div className="px-3"><img src={client7} className="img-fluid" alt="Client 7" /></div>
-      <div className="px-3"><img src={client8} className="img-fluid" alt="Client 8" /></div>
-      <div className="px-3"><img src={client9} className="img-fluid" alt="Client 9" /></div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client1} className="img-fluid client-logo" alt="Client 1" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client2} className="img-fluid client-logo" alt="Client 2" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client3} className="img-fluid client-logo" alt="Client 3" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client4} className="img-fluid client-logo" alt="Client 4" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client5} className="img-fluid client-logo" alt="Client 5" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client6} className="img-fluid client-logo" alt="Client 6" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client7} className="img-fluid client-logo" alt="Client 7" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client8} className="img-fluid client-logo" alt="Client 8" />
+      </div>
+      <div className="px-3 d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
+        <img src={client9} className="img-fluid client-logo" alt="Client 9" />
+      </div>
     </Slider>
   </div>
 </section>

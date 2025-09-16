@@ -76,7 +76,7 @@ const Navbar = () => {
     className={`nav-link ${location.pathname === '/career' ? 'active' : ''}`}
     to="/career"
   >
-    <i className="fas fa-briefcase me-1"></i> Career
+    <i className="fas fa-briefcase me-1"></i> Careers
   </Link>
 </li>
 

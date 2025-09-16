@@ -69,10 +69,12 @@ const About = () => {
             </div>
 
             <div className="col-lg-6">
-              <div className="card bg-primary text-white">
+              <div className="card bg-primary text-white shadow-lg" style={{ background: 'var(--primary-blue) !important' }}>
                 <div className="card-body p-5">
-                  <h3 className="card-title mb-3">Our Approach</h3>
-                  <p className="card-text">
+                  <h3 className="card-title mb-4 fw-bold">
+                    <i className="fas fa-lightbulb me-2"></i>Our Approach
+                  </h3>
+                  <p className="card-text lead">
                     We balance design, strategy, and execution to create digital solutions that truly represent your brand's unique personality. 
                     Every touchpoint is crafted with purpose, from your website's first pixel to your social media voice.
                   </p>
@@ -84,7 +86,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-5 bg-light">
+      <section className="py-3 bg-light">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mb-4">
@@ -198,11 +200,11 @@ const About = () => {
             <div className="col-lg-8 mx-auto">
               <div className="card">
                 <div className="card-body p-4">
-                  <h3 className="card-title text-dark text-center mb-4">Tell Your Requirement</h3>
+                  <h3 className="card-title text-white text-center mb-4">Tell Your Requirement</h3>
                   <form onSubmit={sendEmail}>
                     <div className="row g-3">
                       <div className="col-md-6">
-                        <label htmlFor="name" className="form-label text-dark">Name *</label>
+                        <label htmlFor="name" className="form-label text-white">Name *</label>
                         <input 
                           type="text" 
                           className="form-control" 
@@ -213,7 +215,7 @@ const About = () => {
                         />
                       </div>
                       <div className="col-md-6">
-                        <label htmlFor="contact" className="form-label text-dark">Contact Number *</label>
+                        <label htmlFor="contact" className="form-label text-white">Contact Number *</label>
                         <input 
                           type="tel" 
                           className="form-control" 
@@ -224,7 +226,7 @@ const About = () => {
                         />
                       </div>
                       <div className="col-12">
-                        <label htmlFor="email" className="form-label text-dark">e-Mail ID *</label>
+                        <label htmlFor="email" className="form-label text-white">e-Mail ID *</label>
                         <input 
                           type="email" 
                           className="form-control" 
@@ -235,7 +237,7 @@ const About = () => {
                         />
                       </div>
                       <div className="col-12">
-                        <label htmlFor="requirement" className="form-label text-dark">Tell your Requirement *</label>
+                        <label htmlFor="requirement" className="form-label text-white">Tell your Requirement *</label>
                         <textarea 
                           className="form-control" 
                           id="requirement" 

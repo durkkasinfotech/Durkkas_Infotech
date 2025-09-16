@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Footer.css';
-import isoImage from '../assets/images/iso.png'; // ✅ Import your ISO image
+import isoImage from '../assets/images/iso.png'; // Import your ISO image
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,15 +26,19 @@ const Footer = () => {
           {/* Center Content */}
           <div className="col-md-4 mb-3 mb-md-0">
             <h5>Durkkas InfoTech</h5>
-            <p className="mb-0">Crafting Websites. Shaping Identities. Driving Growth.</p>
+            <p className="mb-0" style={{ whiteSpace: 'nowrap' }}>Crafting Websites. Shaping Identities. Driving Growth.</p>
           </div>
 
           {/* Right Content */}
           <div className="col-md-4 mb-3 mb-md-0">
             <h6>Contact Info</h6>
             <p className="mb-1">
-              <i className="fas fa-phone me-2"></i>
+              <i className="fas fa-mobile-alt me-2"></i>
               +91 93 61 53 50 50
+            </p>
+            <p className="mb-1">
+              <i className="fas fa-phone me-2"></i>
+              04562690272
             </p>
             <p className="mb-0">
               <i className="fas fa-map-marker-alt me-2"></i>
@@ -47,8 +51,8 @@ const Footer = () => {
         <hr className="my-3" />
         <div className="row">
           <div className="col-12 text-center">
-            <p className="mb-0">
-              © {currentYear} Durkkas InfoTech. All rights reserved.
+            <p className="mb-0 copyright-text">
+              {currentYear} Durkkas InfoTech. All rights reserved.
             </p>
           </div>
         </div>

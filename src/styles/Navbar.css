@@ -18,7 +18,7 @@
   min-height: 105px;
 }
 
-/* ✅ BLUE NAVBAR VARIANT for non-home pages */
+/* BLUE NAVBAR VARIANT for non-home pages */
 .navbar.on-blue {
   --nav-bg: #0b20dd; /* Blue background */
   --nav-brand-color: #ffffff; /* White brand text */

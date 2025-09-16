@@ -31,7 +31,7 @@ const SocialMediaMarketing = () => {
         <h2 className="smm-section-title">What We Deliver</h2>
         <div className="smm-grid">
           <div className="smm-card">
-            <h3>📊 Social Media Strategy & Planning</h3>
+            <h3><i className="fas fa-chart-line me-2"></i>Social Media Strategy & Planning</h3>
             <p>
               Tailored blueprints aligned with your goals — from awareness to
               conversions. We define KPIs, choose the right platforms, and 
@@ -39,7 +39,7 @@ const SocialMediaMarketing = () => {
             </p>
           </div>
           <div className="smm-card">
-            <h3>🎨 Content Creation & Management</h3>
+            <h3><i className="fas fa-paint-brush me-2"></i>Content Creation & Management</h3>
             <p>
               Posts, reels, carousels, videos, and stories designed to hook 
               your audience. Every piece reflects your brand’s voice and 
@@ -47,14 +47,14 @@ const SocialMediaMarketing = () => {
             </p>
           </div>
           <div className="smm-card">
-            <h3>💰 Paid Campaigns & Advertisements</h3>
+            <h3><i className="fas fa-dollar-sign me-2"></i>Paid Campaigns & Advertisements</h3>
             <p>
               ROI-driven ads across Facebook, Instagram, LinkedIn, and YouTube. 
               We handle audience targeting, creatives, A/B testing, and budget optimization.
             </p>
           </div>
           <div className="smm-card">
-            <h3>🤝 Community Engagement</h3>
+            <h3><i className="fas fa-handshake me-2"></i>Community Engagement</h3>
             <p>
               Build authentic relationships with followers. Through 
               timely interactions, comments, and customer support, we turn 
@@ -66,7 +66,7 @@ const SocialMediaMarketing = () => {
 
       {/* ANALYTICS */}
       <section className="smm-analytics">
-        <h2 className="smm-section-title">📈 Performance Analytics</h2>
+        <h2 className="smm-section-title"><i className="fas fa-chart-bar me-2"></i>Performance Analytics</h2>
         <p className="smm-section-text">
           Every strategy is data-driven. We provide reports with metrics like 
           reach, engagement, conversions, and ROI. Insights help us 
@@ -79,28 +79,28 @@ const SocialMediaMarketing = () => {
         <h2 className="smm-section-title">Why Choose Durkkas InfoTech?</h2>
         <div className="smm-grid smm-benefit-grid">
           <div className="smm-card smm-benefit-card">
-            <h3>🌍 Increased Visibility</h3>
+            <h3><i className="fas fa-globe me-2"></i>Increased Visibility</h3>
             <p>
               Expand your brand presence across platforms and reach the right 
               audience with precision targeting.
             </p>
           </div>
           <div className="smm-card smm-benefit-card">
-            <h3>⚡ Faster Growth</h3>
+            <h3><i className="fas fa-bolt me-2"></i>Faster Growth</h3>
             <p>
               Accelerate brand growth with campaigns that generate leads and 
               boost customer loyalty.
             </p>
           </div>
           <div className="smm-card smm-benefit-card">
-            <h3>🔒 Brand Trust</h3>
+            <h3><i className="fas fa-shield-alt me-2"></i>Brand Trust</h3>
             <p>
               Build credibility with consistent, engaging messaging that keeps 
               your brand top of mind.
             </p>
           </div>
           <div className="smm-card smm-benefit-card">
-            <h3>📊 Data-Driven Results</h3>
+            <h3><i className="fas fa-database me-2"></i>Data-Driven Results</h3>
             <p>
               We track everything — so you always know the value your campaigns 
               bring to the business.
@@ -112,7 +112,7 @@ const SocialMediaMarketing = () => {
       {/* CTA */}
       <section className="smm-cta bg-primary">
         <h2 className="smm-cta-title text-white">
-          🚀 Ready to Amplify Your Social Media Presence?
+          <i className="fas fa-rocket me-2"></i>Ready to Amplify Your Social Media Presence?
         </h2>
         <p className="smm-cta-text text-white">
           Let’s create strategies that don’t just gain followers but convert 
